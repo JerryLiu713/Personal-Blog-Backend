@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/Blog?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: Gold2020@@
+    password: ENC(xmcdiTVIxD1Frl821+E/6KwHyi42PnBA)
   jpa:
     hibernate:
       ddl-auto: none
@@ -13,3 +13,7 @@ logging:
   level:
     root: info
     com.blog.blog: info
+
+jasypt:
+  encryptor:
+    password: 123
