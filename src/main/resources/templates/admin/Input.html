@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Input</title>
+
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editor/css/editormd.min.css">
+    <link rel="stylesheet" href="../../static/css/me.css">
+</head>
+
+<body>
+    <!--Navigation-->
+    <nav class="ui inverted attached segment m-padded-tb-mini" >
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog Information Page</h2>
+                <a href="#" class="item"><i class="home icon"></i>First page</a>
+                <a href="#" class="item"><i class="idea icon"></i>Categories</a>
+                <a href="#" class="item"><i class="tags icon"></i>Label</a>
+                <div class="right menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
+                            Jenny Hess
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="ui pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="teal item">Publish</a>
+                <a href="#" class="teal active item">Cell</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Mid-->
+    <div class="m-container">
+        <div class="ui container">
+            <form action="#" method="post" class="ui form">
+
+                <div class="field">
+                    <div class="ui left labeled input">
+                        <div class="ui selection compact teal basic dropdown label">
+                            <input type="hidden" value="Origin">
+                            <i class="dropdown icon"></i>
+                            <div class="text">Origin</div>
+                            <div class="menu">
+                                <div class="item" data-value="Origin">Origin</div>
+                                <div class="item" data-value="3RD">3RD</div>
+                                <div class="item" data-value="Translation">Translation</div>
+                            </div>
+                        </div>
+                        <input type="text" name="title" placeholder="title">
+                    </div>
+
+                </div>
+
+                <div class="filed">
+                    <div id="md-content" style="z-index: 1" !important>
+                        <textarea placeholder="Blog contents" name="content" style="display: none">
+                            [TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+                        </textarea>
+                    </div>
+
+                </div>
+
+                <div class="two fields">
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact teal basic label">Categories</label>
+                             <div class="ui fluid selection dropdown">
+                                 <input type="hidden" name="tag">
+                                 <i class="dropdown icon"></i>
+                                 <div class="default text">Categories</div>
+                                 <div class="menu">
+                                     <div class="item" data-value="1">Error Log</div>
+                                     <div class="item" data-value="1">Developer Log</div>
+                                 </div>
+                             </div>
+                            </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left labeled action input">
+                            <label class="ui compact teal basic label">Label</label>
+                            <div class="ui fluid selection multiple search dropdown">
+                                <input type="hidden" name="tag">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Label</div>
+                                <div class="menu">
+                                    <div class="item" data-value="1">Java</div>
+                                    <div class="item" data-value="2">JavaScript</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+
+                    <div class="ui left labeled input">
+                        <label class="ui teal basic label">Pictures</label>
+                        <input type="text" name="indexPicture" placeholder="Picture's URL">
+                    </div>
+
+                </div>
+                <div class="inline fields">
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
+                                <label for="recommend">Recommend</label>
+                            </div>
+                        </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="shareInfo" name="shareInfo" class="hidden">
+                            <label for="recommend">Info</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="appreciation" name="appreciation" class="hidden">
+                            <label for="recommend">Appreciation</label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" id="comment" name="comment" class="hidden">
+                            <label for="recommend">Comment</label>
+                        </div>
+                    </div>
+                    </div>
+                <div class="ui right aligned container">
+                    <button type="button" class="ui button" onclick="window.history.go(-1)">Back</button>
+                    <button class="ui secondary button">Save</button>
+                    <button class="ui teal button">Publish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <!--basement footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided grid">
+                <div class="three wide column">
+                    <img src="../../static/images/16pic_1892356_s.jpg" class="ui rounded image" alt="">
+                </div>
+                <div class="three wide column"></div>
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header">New Blog</h4>
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a>
+                    </div>
+                <div class="three wide column"></div>
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header">New Blog</h4>
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a>
+                        <a href="#" class="item">User Story</a>
+                    </div>
+                <div class="seven wide column">
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p>Copyright @ 2019 - 2020 Blog was designed by Jerry Liu</p>
+        </div>
+
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="../../static/lib/editor/editormd.min.js"></script>
+            <script>
+                //初始化Markdown
+                var contentEditor;
+                $(function() {
+                    testEditor = editormd("md-content", {
+                        width   : "100%",
+                        height  : 640,
+                        syncScrolling : "single",
+                        path    : "../static/lib/editor/lib/"
+                    });
+                });
+
+                $('.ui.dropdown').dropdown();
+            </script>
+</body>
+</html>

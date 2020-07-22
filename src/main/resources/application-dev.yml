@@ -4,6 +4,8 @@ spring:
     url: jdbc:mysql://localhost:3306/Blog?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: ENC(xmcdiTVIxD1Frl821+E/6KwHyi42PnBA)
+  thymeleaf:
+    prefix: classpath:/templates/
   jpa:
     hibernate:
       ddl-auto: none
