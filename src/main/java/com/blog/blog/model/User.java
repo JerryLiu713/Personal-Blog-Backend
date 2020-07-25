@@ -1,4 +1,4 @@
-package com.blog.blog.po;
+package com.blog.blog.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;

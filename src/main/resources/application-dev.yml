@@ -5,10 +5,12 @@ spring:
     username: root
     password: ENC(xmcdiTVIxD1Frl821+E/6KwHyi42PnBA)
   thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
     prefix: classpath:/templates/
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
 
 logging:
