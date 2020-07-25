@@ -22,27 +22,27 @@ public class loginController {
 
     @GetMapping
     public String loginPage() {
-        return "admin/login_1";
+        return "admin/login";
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam(required = false) String username,
-                        @RequestParam(required = false) String password,
+    public String login(@RequestParam String username,
+                        @RequestParam String password,
                         HttpSession session,
                         RedirectAttributes attributes) {
         User user = userService.checkUser(username,password);
         if(user != null) {
             user.setPassword(null);
             session.setAttribute("user",user);
-            return "admin/index_1";
+            return "admin/index";
         } else {
             attributes.addFlashAttribute("message:","username/password error");
-            return "redirect:admin/login_1";
+            return "redirect:admin/login";
         }
     }
     @GetMapping("/logout")
     public String logout(HttpSession httpSession) {
         httpSession.removeAttribute("user");
-        return "redirect:/admin_1";
+        return "redirect:/admin";
     }
 }
